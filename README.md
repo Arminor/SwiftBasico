@@ -1,7 +1,6 @@
 # SwiftBasico
 Elementos básicos del lenguaje y ejercicios para comenzar a desarrollar aplicaciones para iOS
-CursoSwiftBasico. La carpeta descargen en mac para ejecutarla
-El archivo playgroundSwiftBasico es un archivo de word para que puedan acceder y practicar en PC
+CursoSwiftBasico. La carpeta descargen en mac para ejecutarla. El archivo playgroundSwiftBasico es un archivo de word para que puedan acceder y practicar en PC
 
 Sitios de interés
 
