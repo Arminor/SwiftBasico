@@ -15,10 +15,11 @@ import Foundation
 //Variables y constantes
 let MiApellido : String = "Minor"
 
-//Esto es una declaración de una constante
+//Esto es una declaración de una constante, un valor que no va a cambiar durante la ejecución de mi programa
 let miNombre : String = "Andrés"
 
-//Esto es una declaración de una variable, un valor que va a cambiar, esperamos que cambie en nuestro programa
+//Esto es una declaración de una variable, un valor que va a cambiar o esperamos que cambie durante la ejecución de nuestro programa
+// También para indicar que es un valor que puede tener muchos muchos muchos muchos valores durante la ejecución del programa
 // entiendase programa como una pequeña aplicación en nuestro celular o en una computadora
 var miEdad : Int = 23
 var miDireccion : String = "nombreDeCalle"
