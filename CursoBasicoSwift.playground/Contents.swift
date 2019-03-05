@@ -508,7 +508,7 @@ default:
 
  /********************** COLECCIONES ************************************/
 
-//Arrays
+//Arrays, esas son las formas de definir un arreglo
 
 var numeros : [Int] = [0,1,2,3,4,5,6,7,8,9,10]
 
