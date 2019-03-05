@@ -1,4 +1,7 @@
 import Foundation
+import UIKit
+ 
+ 
 //Lenguaje de programación SWIFT
 //Esto es un comentario
 //Puedes poner en practica a lo largo del archivo lo que quieras, para eso son lo playgrounds. Haz y deshaz tantas veces como quieras
@@ -15,19 +18,19 @@ import Foundation
 //Variables y constantes
 let MiApellido : String = "Minor"
 
-//Esto es una declaración de una constante, un valor que no va a cambiar durante la ejecución de mi programa
+//Esto es una declaración de una constante, un valor que no va a cambiar durante la ejecución de nuestro programa
 let miNombre : String = "Andrés"
 
-//Esto es una declaración de una variable, un valor que va a cambiar o esperamos que cambie durante la ejecución de nuestro programa
-// También para indicar que es un valor que puede tener muchos muchos muchos muchos valores durante la ejecución del programa
+//Esto es una declaración de una variable, un valor que va a cambiar, esperamos que cambie en nuestro programa
 // entiendase programa como una pequeña aplicación en nuestro celular o en una computadora
 var miEdad : Int = 23
 var miDireccion : String = "nombreDeCalle"
 var miNumeroDeCasa : Int = 19
 var miNumeroInterior : Int = 4
-// Como ven las constantes se declara y se definen de la misma forma
+// Como ven las constantes se declaran y se definen de la misma forma
 let primeraCarrera : String = "Informática"
 let miNacionalidad : String = "Mexicana"
+
 
 /*
  Toda variable se compone de tres elementos. Sean constantes o mutables, que cambian su valor. Estos elementos son:
@@ -52,7 +55,15 @@ let miNacionalidad : String = "Mexicana"
     var            minutos      :      Int               =                      60
 
 
+//Pasos, Declarar, Asignar valor. Ambas forman lo que se llama definir una variable
+//Para solamente declarar una variable hacemos lo siguiente:
+var laFrase : String!
 
+//En dónde el símbolo ! al final de un tipo de dato nos indica que más tarde se va a definir(dar el valor)
+
+laFrase = "Esta es la frase"
+
+laFrase
 
 /*********************   OPERACIONES    ARITMÉTICAS     ***********+*********/
 //Para realizar operaciones aritmeticas utilizamos operadores aritmeticos: + - * / %
@@ -258,12 +269,18 @@ funcionSumar(Int(operando1),Int(operando2))
 
  */
 
+
+
 //Dale play aqui para que recuerdes qué valor tiene el booleano
-booleano
+booleano = true
 entero = 30
 
 //para tomar estas deciciones vamos a comenzar a ver que existen otros operadores, se llaman operadores relacionales o de comparación: en este caso ==
-if(booleano == true){
+
+booleano
+
+
+if booleano{
     print("Verdadero")
 }else{
     print("Falso")
@@ -291,17 +308,55 @@ print(entero, booleano)
 >
 >=
 <=
+ 
+ 
+ 
+*/
+ 
 
+var uno = 1
+var dos = 2
+
+uno == dos
+
+uno != dos
+
+5 < 8
+
+9 > 100
+
+9 < 9
+
+9 <= 9
+
+
+let lahoraparallegartemprano : Double = 5.41
+
+func saberSiVoyALlegar(_ horaEnQueMelevante : Double){
+    if(horaEnQueMelevante < lahoraparallegartemprano){
+        print("Si llego")
+    }else{
+        print("No llegué")
+    }
+}
+
+
+saberSiVoyALlegar(5.41)
+
+ /**************************
  
 Operadores Lógicos
 && AND Debe cumplir ambas condiciones
 || OR Puede cumplir por lo menos una de las dos condiciones
 !  NOT, un valor opuesto o complemento en valores booleanos
  
+XOR
+ 
 NAND
 NOR
-XOR
 NXOR
+NXOR
+ 
 */
 
 if(operando1 == operando2){
@@ -332,7 +387,145 @@ if !booleano{
     print("La negación de \(booleano) es \(!booleano)\n\n")
 }
 
+//Entrar a un Antro.
+var edad : Int = 17
+var cadenero : String = "Toño"
+var cadeneroEsAmigo : Bool = true
+var entrar : Bool = true
+var bartenderEsMiAmigo : Bool = true
+var gerenteEsMiAMigo : Bool = true
+
+///OR
+if (edad >= 18) || (cadeneroEsAmigo){
+    entrar = true
+    print("Diversión!!!")
+    
+}else{
+    entrar = false
+    print("Vamos a casa :(")
+}
+    
+
+///AND
+if (entrar) && (gerenteEsMiAMigo){
+    print("Hoy no pago nada")
+    ///NOT
+}else if !gerenteEsMiAMigo{
+    print("Me gasté $ ****")
+}
 
 
+/*
+ Para el SuperBowl
+ Apuesto a ambos equipos
+ Equipos: Patriotas y Carneros
+ Apuesta = $ 500
+     Si Patriotas ganaban -> $ 1000
+     El juego se iba a tiempos extras.-> $ 1000
+
+ Si ambas anteriores se cumplen Gano: -> $ 2000
+ 
+ Si la suma total de puntos al final del juego era mayor a 50
+ Gano $700 aunque perdieran los Pats.
+
+ |||||||||||||||||||||||||||||||||
+  */
+
+//Solución:)
+
+
+var tiemposExtras : Bool = false
+let apuesta : Double = 500.00
+
+func calcular(_ patriotas : Int, _ carneros :  Int){
+    var patriotasGana : Bool = false
+    var acumulador : Double = 0
+    var gananciaReal : Double = 0
+    
+    
+    if patriotas > carneros{
+        patriotasGana = true
+    }
+        
+    if (tiemposExtras) || (patriotasGana){
+        acumulador = acumulador + 1000
+    }else if tiemposExtras || !patriotasGana{
+        acumulador = acumulador + 1000
+    }
+    
+    if (tiemposExtras) && (patriotasGana){
+        acumulador = acumulador + 1000
+    }else if tiemposExtras && !patriotasGana{
+        acumulador = acumulador + 1000
+    }
+    
+    if (patriotas + carneros) > 50{
+        acumulador = acumulador + 700
+    }
+    gananciaReal = acumulador - (apuesta * 2)
+    
+    print("Acumulas $ \(acumulador), pero como se apostaron $\(apuesta) a ambos equipos\nLa ganancia real es de: \(gananciaReal) ")
+}
+
+
+calcular(24, 46)
+
+
+//Estructura de control Switch
+
+var carreraId : Int = 3
+
+
+switch carreraId{
+    case 1 :
+        print("\n\n\nContaduría")
+    case 2 :
+        print("\n\n\nAdministración")
+    case 3 :
+        print("\n\n\nInformática 🐶")
+    case 4 :
+        print("\n\n\nNegocios internacionales")
+    default:
+        print("\n\n\nNo hay, no existe")
+}
+
+ 
+/*************                  Switch con intervalos de valor                   *************************/
+
+var longitud = Int()
+longitud = 8770
+
+switch longitud {
+case 0...9:
+    print("Corto")
+case 10...99:
+    print("Medio")
+case 100...999:
+    print("Largo")
+default:
+    print("Hyper")
+}
+
+ /********************** COLECCIONES ************************************/
+
+//Arrays
+
+var numeros : [Int] = [0,1,2,3,4,5,6,7,8,9,10]
+
+var decimales : [Double] = [1.2, 3/4, 5/3, 4.5, 6.9]
+
+var nombres : Array<String> = ["Betsy", "Alejandro", "Mariana", "Imanol", "Miguel"]
+
+nombres[3]
+var otrosDecimales : Array<Double> = [1/3, 2/8, 3/6, 4/8]
+
+
+let objetoEstructuraArreglo = [Int]([3,4,5,6,7,8,9,4,3,7])
+//objetoEstructuraArreglo = [3,5,6,7,8,9,0,6,5,4,3]
+
+//Así llamamos a los valores que están en la posición 'x' del arreglo 'x'
+decimales[1]//Aqui le decimos que es la posición 1 del arreglo
+otrosDecimales[0]// Todos los arreglos comienzan con el índice 0. Un arreglo con 10 valores tiene indice 0-9
+objetoEstructuraArreglo[0]
 
 
