@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vyh-kl-DTS">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web!-->
+        <scene sceneID="P3F-4B-cwo">
+            <objects>
+                <viewController id="COv-32-ZMG" customClass="ViewController" customModule="SafariServices_WebKitView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uK6-5e-fWo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hUT-Vd-WzK">
+                                <rect key="frame" x="85" y="378" width="244" height="140"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVA-td-TSb" userLabel="webKitView">
+                                        <rect key="frame" x="0.0" y="0.0" width="244" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="WebKitView"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="ZKp-RE-obh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQm-xZ-rbg">
+                                        <rect key="frame" x="0.0" y="80" width="244" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="SafariServices"/>
+                                        <connections>
+                                            <action selector="showSafari:" destination="COv-32-ZMG" eventType="touchUpInside" id="NPq-K1-Vym"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hUT-Vd-WzK" firstAttribute="centerY" secondItem="uK6-5e-fWo" secondAttribute="centerY" id="2wY-de-Fwf"/>
+                            <constraint firstItem="hUT-Vd-WzK" firstAttribute="centerX" secondItem="uK6-5e-fWo" secondAttribute="centerX" id="m7g-21-4Cw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DNo-vQ-0cE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Web!" id="8WV-kg-6Ee">
+                        <barButtonItem key="backBarButtonItem" title="Ok" id="0nQ-vD-JpM"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K9f-NT-v0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="271.01449275362319" y="395.75892857142856"/>
+        </scene>
+        <!--Web Kit View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WebKitViewController" customModule="SafariServices_WebKitView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5m-li-tam" userLabel="webView">
+                                <rect key="frame" x="0.0" y="148" width="414" height="714"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mc-8c-RWf" userLabel="btnAhead">
+                                <rect key="frame" x="374" y="98" width="29" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="1Pr-mU-2TE"/>
+                                    <constraint firstAttribute="width" constant="29" id="BLI-nX-FyD"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="icons8-derecha-96"/>
+                                <connections>
+                                    <action selector="aheadBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ht5-J5-lmA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5m-YB-sCm" userLabel="btnBack">
+                                <rect key="frame" x="11" y="98" width="33" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="DMx-vu-IHx"/>
+                                    <constraint firstAttribute="height" constant="42" id="Wqr-lg-dDH"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="icons8-izquierda-96"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LK1-KE-Lv4"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cb3-0Z-2jt" userLabel="textViewUri">
+                                <rect key="frame" x="54" y="104" width="310" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="j5m-li-tam" firstAttribute="top" secondItem="6mc-8c-RWf" secondAttribute="bottom" constant="8" id="2qb-Y0-IWR"/>
+                            <constraint firstItem="6mc-8c-RWf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="58X-cN-EmY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j5m-li-tam" secondAttribute="bottom" id="CP3-PC-jZp"/>
+                            <constraint firstItem="Cb3-0Z-2jt" firstAttribute="leading" secondItem="M5m-YB-sCm" secondAttribute="trailing" constant="10" id="G0y-d9-Jxf"/>
+                            <constraint firstItem="j5m-li-tam" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I5Q-lu-7cS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6mc-8c-RWf" secondAttribute="trailing" constant="11" id="IAp-if-DYj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j5m-li-tam" secondAttribute="trailing" id="L0C-dC-Szo"/>
+                            <constraint firstItem="j5m-li-tam" firstAttribute="top" secondItem="M5m-YB-sCm" secondAttribute="bottom" constant="8" id="L2h-h1-hEl"/>
+                            <constraint firstItem="M5m-YB-sCm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="QqK-wk-xIo"/>
+                            <constraint firstItem="j5m-li-tam" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="SGH-FY-vwK"/>
+                            <constraint firstItem="M5m-YB-sCm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="XZN-Bc-ita"/>
+                            <constraint firstItem="6mc-8c-RWf" firstAttribute="leading" secondItem="Cb3-0Z-2jt" secondAttribute="trailing" constant="10" id="lA9-3R-KGi"/>
+                            <constraint firstItem="Cb3-0Z-2jt" firstAttribute="centerY" secondItem="6mc-8c-RWf" secondAttribute="centerY" id="wh2-GT-g9I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnAhead" destination="6mc-8c-RWf" id="SE1-WO-MJ8"/>
+                        <outlet property="btnBack" destination="M5m-YB-sCm" id="CbG-9W-Oy7"/>
+                        <outlet property="textViewUri" destination="Cb3-0Z-2jt" id="DyH-ns-NxP"/>
+                        <outlet property="webView" destination="j5m-li-tam" id="mWd-OW-TlM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1171.0144927536232" y="395.75892857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qNi-T7-3w9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vyh-kl-DTS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nlt-on-baL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="COv-32-ZMG" kind="relationship" relationship="rootViewController" id="mWQ-KS-9wV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CcC-Ss-rQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-639.13043478260875" y="395.75892857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-derecha-96" width="96" height="96"/>
+        <image name="icons8-izquierda-96" width="96" height="96"/>
+    </resources>
+</document>
