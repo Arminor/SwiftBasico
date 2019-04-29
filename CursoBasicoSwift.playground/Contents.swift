@@ -1,10 +1,12 @@
 import Foundation
 import UIKit
- 
- 
+
+
+let a = "D="
+
 //Lenguaje de programación SWIFT
 //Esto es un comentario
-//Puedes poner en practica a lo largo del archivo lo que quieras, para eso son lo playgrounds. Haz y deshaz tantas veces como quieras
+//Puedes poner en practica a lo largo del archivo lo que quieras, para eso son lo playgrounds. Has y deshas tantas veces como quieras
 
 /*
  Comentar más de
@@ -174,10 +176,8 @@ cadena1 += "\nMundo"// Notese que se utiliza \n para realizar un salto de línea
 
 /*
  Esto es un casteo de tipos para que podamos hacer operaciones entre diferentes valores con
- con diferentes tipos de datos */
-
-
-/** SINTAXIS:
+ con diferentes tipos de datos
+SINTAXIS:
  modificador + identificador + : + tipoDeDato + operador asignacion + variable operando + tipoDeDato al que lo quiero convertir seguido de la variable operando que quiero convertir entre parentesis*/
 var suma : Double = numeroDecimal + Double(entero)
 
@@ -343,7 +343,8 @@ func saberSiVoyALlegar(_ horaEnQueMelevante : Double){
 
 saberSiVoyALlegar(5.41)
 
- /**************************
+
+/**************************
  
 Operadores Lógicos
 && AND Debe cumplir ambas condiciones
@@ -387,6 +388,8 @@ if !booleano{
     print("La negación de \(booleano) es \(!booleano)\n\n")
 }
 
+
+
 //Entrar a un Antro.
 var edad : Int = 17
 var cadenero : String = "Toño"
@@ -427,6 +430,8 @@ if (entrar) && (gerenteEsMiAMigo){
  
  Si la suma total de puntos al final del juego era mayor a 50
  Gano $700 aunque perdieran los Pats.
+ 
+ Utilizar una funcion que como parametros reciba el resultado del partido
 
  |||||||||||||||||||||||||||||||||
   */
@@ -434,7 +439,7 @@ if (entrar) && (gerenteEsMiAMigo){
 //Solución:)
 
 
-var tiemposExtras : Bool = false
+var tiemposExtras : Bool = true
 let apuesta : Double = 500.00
 
 func calcular(_ patriotas : Int, _ carneros :  Int){
@@ -468,10 +473,10 @@ func calcular(_ patriotas : Int, _ carneros :  Int){
 }
 
 
-calcular(24, 46)
+calcular(28,26)
 
 
-//Estructura de control Switch
+//Estructura de control selectiva: Switch
 
 var carreraId : Int = 3
 
@@ -489,13 +494,29 @@ switch carreraId{
         print("\n\n\nNo hay, no existe")
 }
 
+
+
+switch carreraId {
+    case 2:
+    print("Esa carrera es vieja")
+    case 3:
+    print ("La mejor carrera")
+    default:
+    print("Carrera Nueva")
+}
+
  
-/*************                  Switch con intervalos de valor                   *************************/
 
-var longitud = Int()
-longitud = 8770
 
-switch longitud {
+
+/*************                  Switch con intervalos de valores                   *************************/
+
+
+
+var wallSize = Int()
+wallSize = 8770
+
+switch wallSize {
 case 0...9:
     print("Corto")
 case 10...99:
@@ -506,26 +527,70 @@ default:
     print("Hyper")
 }
 
+
+ 
  /********************** COLECCIONES ************************************/
 
-//Arrays, esas son las formas de definir un arreglo
+//Arrays
 
 var numeros : [Int] = [0,1,2,3,4,5,6,7,8,9,10]
 
 var decimales : [Double] = [1.2, 3/4, 5/3, 4.5, 6.9]
 
-var nombres : Array<String> = ["Betsy", "Alejandro", "Mariana", "Imanol", "Miguel"]
-
+var nombres : Array<String> = ["Betzy", "Alejandro", "Mariana", "Imanol", "Miguel"]
 nombres[3]
+
 var otrosDecimales : Array<Double> = [1/3, 2/8, 3/6, 4/8]
 
 
 let objetoEstructuraArreglo = [Int]([3,4,5,6,7,8,9,4,3,7])
+
+
 //objetoEstructuraArreglo = [3,5,6,7,8,9,0,6,5,4,3]
 
-//Así llamamos a los valores que están en la posición 'x' del arreglo 'x'
-decimales[1]//Aqui le decimos que es la posición 1 del arreglo
-otrosDecimales[0]// Todos los arreglos comienzan con el índice 0. Un arreglo con 10 valores tiene indice 0-9
+decimales[1]
+otrosDecimales[0]
 objetoEstructuraArreglo[0]
 
+var datosAndres : [String] = ["Andrés", "1995", "27", "Agosto", "Informática"]
 
+datosAndres[1]
+
+//Iteraciones
+
+let diasSemana: [String] = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes"]
+var frutas: [String] = ["Pera", "Manzana", "Piña", "Uvas", "Naranja"]
+
+for fruta in frutas{
+    print("Me gusta comer \(fruta)")
+}
+
+for dia in diasSemana{
+    print("El \(dia) vi a mi novia")
+}
+
+
+
+
+print("\n\(a)\n\(a)\n\(a)\n\(a)\n\(a)\n\(a)\n\(a)\n")
+
+
+//Estructuras de datos...Son variables que a su vez guardan el valor de otras variables.
+
+struct algo{
+    var titulo : String
+    var existencias : Int
+    var precio : Double
+}
+
+
+
+
+var algo1 = algo(titulo: "La pantera rosa", existencias: 23, precio : 34.50)
+let queja = "\n\nMuy caro!!"
+print(algo1)
+
+//Notarás que para acceder al valor guardaro de una de las variables dentro de la estructura algo1 utilizamos un punto '.'.  identificadorVAriable'.'campo'
+//En una estructura las variables se conocen cono 'campos', la estructura en sí también es llamada un registro. Entonces un registro guarda campos. Una estructura guarda campos.
+//Una variable con campos es como se ve una estructura. Entonces se puede inducir que es similar e un tipo de dato. Si(if) lo lograste ver muy bien. De lo contratrio(else) estudiale más
+print("EL otro día revisé los títulos en línea y caí en cuenta que \(algo1.titulo) contaba con \(algo1.existencias) existencias y ahora costaba $\(algo1.precio)...", queja)
