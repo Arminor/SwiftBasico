@@ -2,8 +2,15 @@
 //  MapViewController.swift
 //  EjercicioMapa
 //     Los mapas dentro del desarrollo nativo de iOS se trabajan, se desarrollan con el servicio web de AppleMaps  
-//     A nosotros nos toca utilizar las funciones y los componentes de código que nos proporciona como framework AppleMaps.
-//
+//     A nosotros nos toca utilizar las funciones y los componentes de código que nos proporciona como framework AppleMaps 
+//      a través de MapKit y CoreLocation, otro servicio de Apple.
+
+    MapKit y CoreLocation
+        https://developer.apple.com/documentation/mapkit
+        https://developer.apple.com/documentation/corelocation
+    
+    
+        https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009497
 //  Created by SSiOS on 3/14/19.
 //  Copyright © 2019 SSiOS. All rights reserved.
 //
